@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Recommender</title>
+  <style>
+    body {
+      background-color:rgb(44, 39, 29);
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    #results {
+      margin-top: 20px;
+    }
+    .book {
+      margin-bottom: 15px;
+    }
+    .header h1{
+      color: rgb(255, 255, 255);
+      font-size: 60px;
+      font-family:cursive;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .box h2{
+      color: rgb(185, 172, 155);
+      font-size: x-large;
+      font-style: italic;
+      display: flex;
+      flex-direction:column;
+      justify-content:start;
+      transform: translateX(250px);
+      margin-top: 60px;
+    }
+    .header{
+      width: 1382px;
+      height: 200px;
+      border-radius: 55px;
+      background-color: rgb(87, 65, 30);
+      background-image: url("bookbanner.jpg");
+      display: flex;
+      justify-content:center;
+      flex-direction:row;
+    }
+    .choice{
+      width: 500px;
+      height: 80px;
+      background-color: rgb(104, 86, 61);
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      margin-top: 120px;
+      padding-top: 20px;
+      transform: translateX(-80px);
+
+    
+    }
+    .box{
+      width: 1382px;
+      min-height: 550px;
+      background-color: rgb(80, 62, 50);
+      /*background-image: url("booksforbox-2.jpg");*/
+      border-radius: 20px;
+      display: flex;
+      flex-direction:row;
+      justify-content:center;
+      margin-top: 10px;
+
+    }
+    button{
+      width:120px;
+      height: 25px;
+      border-style:inset;
+      background-color: rgb(92, 75, 64);
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      border-radius: 6px;
+      font-size: 10px;
+      transform: translateY(10px);
+    }   
+    button:hover{
+      color:white;
+    }
+    select{
+      width: 120px;
+      height: 25px;
+      background-color: rgb(92, 75, 64);
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      transform: translateY(10px);
+    }
+    .results{
+      min-height: 300px ;
+    }
+    #popularlabel{
+      color:blanchedalmond;
+      font-size: xx-small;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+    #popularSwitch{
+       accent-color: brown;
+    }
+    #divider{
+      height: auto;
+      width: auto;
+      transform: translateY(13px);
+    }
+  </style>
+
+</head>
+<body>
+  <div class = "header">
+    <h1>Book Recommendations</h1>
+  </div>
+
+
+<div class = "box">
+
+  <h2>Choose a Genre</h2>
+
+
+    <div class = "choice">
+
+
+
+      <label for="genre"></label>
+      <select id="genre">
+        <option value="fiction">Fiction</option>
+        <option value="fantasy">Fantasy</option>
+        <option value="romance">Romance</option>
+        <option value="mystery">Mystery</option>
+        <option value="science fiction">Science Fiction</option>
+        <option value="history">History</option>
+        <option value="biography">Biography</option>
+      </select>
+
+      <button id = "getRecommendation" >Get Book Recommendation</button>
+      <!-- the select is the drop down menu-->
+
+      <div id = "divider">
+        <label id = "popularlabel">
+          <input type="checkbox" id="popularSwitch" />
+          Show popular books only
+        </label>
+      </div>
+
+
+
+    </div>
+
+
+    <script src="script.js"></script> <!--script is inside of the box div for some reason-->
+</div> 
+
+
+  
+
+  <div id="results"></div>
+
+
+  
+
+</body>
+</html>
